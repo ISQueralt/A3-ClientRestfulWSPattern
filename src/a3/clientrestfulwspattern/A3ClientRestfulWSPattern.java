@@ -1,5 +1,7 @@
 package a3.clientrestfulwspattern;
 
+import org.ClientRestful;
+
 /**
  *
  * @author Queralt
@@ -12,12 +14,7 @@ public class A3ClientRestfulWSPattern {
      */
     
     public static void main(String[] args) {
-        System.out.print(getActualTime());
+         ClientRestful client = new ClientRestful();
+         System.out.print(client.getJson());
     }
-
-    private static String getActualTime() {
-        restfulwspattern.Time_Service service = new restfulwspattern.Time_Service();
-        restfulwspattern.Time port = service.getTimePort();
-        return port.getActualTime();
-    } 
 }
